@@ -16,8 +16,8 @@ const ResultsShowScreen = ({ navigation }) => {
   if (result == null) return result;
   return (
     <>
-      <Text>{result.name}</Text>
-      <Text>{result.phone}</Text>
+      <Text style={styles.headerStyle}>{result.name}</Text>
+      <Text style={styles.metaStyle}>{result.phone}</Text>
       <FlatList
         data={result.photos}
         keyExtractor={(photo) => photo}
@@ -33,6 +33,17 @@ const styles = StyleSheet.create({
   imageStyle: {
     width: 250,
     height: 150,
+    marginBottom: 10,
+    marginLeft: 15,
+  },
+  headerStyle: {
+    fontSize: 14,
+    fontWeight: "bold",
+    marginLeft: 15,
+    marginBottom: 10,
+  },
+  metaStyle: {
+    marginLeft: 15,
     marginBottom: 10,
   },
 });
